@@ -3,30 +3,45 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>シンプル買い物リスト – 日々のお買い物を簡単に</title>
+<title class="ja">シンプル買い物リスト – 日々のお買い物を簡単に</title>
 <meta name="description" content="iCloud同期に対応した、シンプルで使いやすい買い物リストアプリ。店舗ごと・日付ごとに整理して、お買い物をもっと身軽に。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="style.css">
 </head>
-<body><nav class="wrap">
+<body>
+
+<nav class="wrap">
   <div class="brand">
     <div class="mark">
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 7L9.5 12.5L20 3" stroke="white" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </div>
-    シンプル買い物リスト
+    <span class="ja">シンプル買い物リスト</span>
+    <span class="en">Simple Shopping List</span>
   </div>
-  <a class="cta-small" href="https://apps.apple.com/jp/app/%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E8%B2%B7%E3%81%84%E7%89%A9%E3%83%AA%E3%82%B9%E3%83%88-%E6%97%A5%E3%80%85%E3%81%AE%E3%81%8A%E8%B2%B7%E3%81%84%E7%89%A9%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%AB/id6760892088" target="_blank" rel="noopener">ダウンロード</a>
+  <div class="nav-right">
+    <div class="lang-switcher" role="group" aria-label="Language">
+      <button class="lang-btn active" id="btn-ja" onclick="setLang('ja')">日本語</button>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')">English</button>
+    </div>
+    <a class="cta-small ja" href="https://apps.apple.com/jp/app/%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E8%B2%B7%E3%81%84%E7%89%A9%E3%83%AA%E3%82%B9%E3%83%88-%E6%97%A5%E3%80%85%E3%81%AE%E3%81%8A%E8%B2%B7%E3%81%84%E7%89%A9%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%AB/id6760892088" target="_blank" rel="noopener">ダウンロード</a>
+    <a class="cta-small en" href="https://apps.apple.com/jp/app/%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E8%B2%B7%E3%81%84%E7%89%A9%E3%83%AA%E3%82%B9%E3%83%88-%E6%97%A5%E3%80%85%E3%81%AE%E3%81%8A%E8%B2%B7%E3%81%84%E7%89%A9%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%AB/id6760892088" target="_blank" rel="noopener">Download</a>
+  </div>
 </nav>
 
 <header class="hero wrap">
   <div class="hero-copy">
-    <div class="eyebrow"><span class="dot"></span>iPhone専用 ・ 完全無料</div>
-    <h1>お買い物を、<br>もっと<span class="underline">身軽に</span>
+    <div class="eyebrow ja"><span class="dot"></span>iPhone専用 ・ 完全無料</div>
+    <div class="eyebrow en"><span class="dot"></span>iPhone Only · Free</div>
+    <h1 class="ja">お買い物を、<br>もっと<span class="underline">身軽に</span>
       <svg viewBox="0 0 200 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 10C40 4 120 4 198 10" stroke="#F4C95D" stroke-width="7" stroke-linecap="round" fill="none"/></svg>
     </h1>
-    <p class="lead">店舗ごと・日付ごとにリストを整理できる、シンプルな買い物リストアプリ。iCloud同期で複数のiPhone間でもデータがいつも最新に。</p>
+    <h1 class="en">Shop Smarter,<br><span class="underline">Stay Light</span>
+      <svg viewBox="0 0 200 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 10C40 4 120 4 198 10" stroke="#F4C95D" stroke-width="7" stroke-linecap="round" fill="none"/></svg>
+    </h1>
+    <p class="lead ja">店舗ごと・日付ごとにリストを整理できる、シンプルな買い物リストアプリ。iCloud同期で複数のiPhone間でもデータがいつも最新に。</p>
+    <p class="lead en">A simple shopping list app that organizes by store and date. Stay in sync across all your iPhones with iCloud.</p>
   </div>
 
   <div class="hero-visual">
@@ -41,73 +56,93 @@
           </span>
         </div>
         <div class="navbar">
-          <h3>今日の買い物</h3>
+          <h3 class="ja">今日の買い物</h3>
+          <h3 class="en">Today's Shopping</h3>
         </div>
         <div class="list">
           <div class="check-item done" onclick="this.classList.toggle('done')">
             <div class="box"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12.5L9 17.5L20 6.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="label">牛乳</div>
+            <div class="label ja">牛乳</div><div class="label en">Milk</div>
           </div>
           <div class="check-item done" onclick="this.classList.toggle('done')">
             <div class="box"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12.5L9 17.5L20 6.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="label">パン</div>
+            <div class="label ja">パン</div><div class="label en">Bread</div>
           </div>
           <div class="check-item" onclick="this.classList.toggle('done')">
             <div class="box"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12.5L9 17.5L20 6.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="label">卵</div>
+            <div class="label ja">卵</div><div class="label en">Eggs</div>
           </div>
           <div class="check-item" onclick="this.classList.toggle('done')">
             <div class="box"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12.5L9 17.5L20 6.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="label">バナナ</div>
+            <div class="label ja">バナナ</div><div class="label en">Banana</div>
           </div>
           <div class="check-item" onclick="this.classList.toggle('done')">
             <div class="box"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12.5L9 17.5L20 6.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="label">洗剤</div>
+            <div class="label ja">洗剤</div><div class="label en">Detergent</div>
           </div>
         </div>
-        <div class="addrow"><span class="plus">＋</span>商品を追加</div>
+        <div class="addrow">
+          <span class="plus">＋</span>
+          <span class="ja">商品を追加</span>
+          <span class="en">Add item</span>
+        </div>
       </div>
     </div>
-    <div class="hint">タップしてチェックしてみてください</div>
+    <div class="hint ja">タップしてチェックしてみてください</div>
+    <div class="hint en">Tap items to check them off</div>
   </div>
 </header>
 
 <section class="features wrap">
   <div class="section-head">
-    <div class="eyebrow"><span class="dot"></span>主な機能</div>
-    <h2>必要なことだけ、ちゃんとできる</h2>
-    <p>機能を詰め込みすぎない。だからこそ、毎日の買い物にすっと馴染みます。</p>
+    <div class="eyebrow ja"><span class="dot"></span>主な機能</div>
+    <div class="eyebrow en"><span class="dot"></span>Features</div>
+    <h2 class="ja">必要なことだけ、ちゃんとできる</h2>
+    <h2 class="en">Just what you need, done right.</h2>
+    <p class="ja">機能を詰め込みすぎない。だからこそ、毎日の買い物にすっと馴染みます。</p>
+    <p class="en">No feature bloat. Just a clean, intuitive list that fits naturally into your daily routine.</p>
   </div>
   <div class="grid">
     <div class="card">
       <div class="icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
-      <h3>すばやく追加</h3>
-      <p>思いついた瞬間に、直感的な操作で商品をリストへ。入力のストレスがありません。</p>
+      <h3 class="ja">すばやく追加</h3>
+      <h3 class="en">Quick Add</h3>
+      <p class="ja">思いついた瞬間に、直感的な操作で商品をリストへ。入力のストレスがありません。</p>
+      <p class="en">Add items the moment they come to mind. Intuitive input, zero friction.</p>
     </div>
     <div class="card">
       <div class="icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
-      <h3>店舗ごとに管理</h3>
-      <p>スーパー、コンビニ、ドラッグストア…複数の店舗のリストをきれいに分けて管理。</p>
+      <h3 class="ja">店舗ごとに管理</h3>
+      <h3 class="en">Organize by Store</h3>
+      <p class="ja">スーパー、コンビニ、ドラッグストア…複数の店舗のリストをきれいに分けて管理。</p>
+      <p class="en">Grocery store, pharmacy, convenience store — keep separate lists for each place you shop.</p>
     </div>
     <div class="card">
       <div class="icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="5" width="16" height="15" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M4 9h16" stroke="currentColor" stroke-width="1.8"/></svg></div>
-      <h3>日付別タブ</h3>
-      <p>「今日」「週末」のように日付で分けて、買い物の計画を整理できます。</p>
+      <h3 class="ja">日付別タブ</h3>
+      <h3 class="en">Date-Based Tabs</h3>
+      <p class="ja">「今日」「週末」のように日付で分けて、買い物の計画を整理できます。</p>
+      <p class="en">Organize shopping trips by date — today, this weekend, or whenever you plan to go.</p>
     </div>
     <div class="card">
       <div class="icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.3l-5.6 3 1.1-6.2-4.5-4.4 6.2-.9L12 3l2.8 5.8 6.2.9-4.5 4.4 1.1 6.2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
-      <h3>お気に入り登録</h3>
-      <p>よく買う商品を登録しておけば、次からはワンタップで追加できます。</p>
+      <h3 class="ja">お気に入り登録</h3>
+      <h3 class="en">Favorites</h3>
+      <p class="ja">よく買う商品を登録しておけば、次からはワンタップで追加できます。</p>
+      <p class="en">Save frequently bought items as favorites and add them again in one tap.</p>
     </div>
     <div class="card">
       <div class="icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z" stroke="currentColor" stroke-width="1.8"/><path d="M12 3a9 18 0 010 18" stroke="currentColor" stroke-width="1.8"/></svg></div>
       <h3>iCloud同期</h3>
-      <p>外出先で作ったリストが、自動的に他のデバイスにも反映。データは自分のiCloudだけに保存されます。</p>
+      <p class="ja">外出先で作ったリストが、自動的に他のデバイスにも反映。データは自分のiCloudだけに保存されます。</p>
+      <p class="en">Lists sync automatically across your iPhones via iCloud. Your data stays private — stored only in your own iCloud account.</p>
     </div>
     <div class="card">
       <div class="icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="16" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/></svg></div>
-      <h3>8種のテーマカラー</h3>
-      <p>ダークモードにも対応。自分の気分に合わせてリストの表情を変えられます。</p>
+      <h3 class="ja">8種のテーマカラー</h3>
+      <h3 class="en">8 Theme Colors</h3>
+      <p class="ja">ダークモードにも対応。自分の気分に合わせてリストの表情を変えられます。</p>
+      <p class="en">Dark mode supported. Choose a color that matches your mood and make the app your own.</p>
     </div>
   </div>
 </section>
@@ -115,29 +150,39 @@
 <section class="how">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow"><span class="dot"></span>使い方</div>
-      <h2>はじめるまで、4ステップ</h2>
+      <div class="eyebrow ja"><span class="dot"></span>使い方</div>
+      <div class="eyebrow en"><span class="dot"></span>How It Works</div>
+      <h2 class="ja">はじめるまで、4ステップ</h2>
+      <h2 class="en">4 steps to get started</h2>
     </div>
     <div class="steps">
       <div class="step">
         <div class="num">01</div>
-        <h4>店舗を追加</h4>
-        <p>スーパーやコンビニなど、よく行くお店を登録します。</p>
+        <h4 class="ja">店舗を追加</h4>
+        <h4 class="en">Add a Store</h4>
+        <p class="ja">スーパーやコンビニなど、よく行くお店を登録します。</p>
+        <p class="en">Register the stores you visit regularly.</p>
       </div>
       <div class="step">
         <div class="num">02</div>
-        <h4>商品を追加</h4>
-        <p>買いたいものをリストに書き出していきます。</p>
+        <h4 class="ja">商品を追加</h4>
+        <h4 class="en">Add Items</h4>
+        <p class="ja">買いたいものをリストに書き出していきます。</p>
+        <p class="en">Write down everything you need to buy.</p>
       </div>
       <div class="step">
         <div class="num">03</div>
-        <h4>チェックして管理</h4>
-        <p>買い物中はタップでチェック。購入済みがひと目で分かります。</p>
+        <h4 class="ja">チェックして管理</h4>
+        <h4 class="en">Check Items Off</h4>
+        <p class="ja">買い物中はタップでチェック。購入済みがひと目で分かります。</p>
+        <p class="en">Tap to check off items as you shop. See what's done at a glance.</p>
       </div>
       <div class="step">
         <div class="num">04</div>
-        <h4>自動で同期</h4>
-        <p>iCloud経由でほかのデバイスとも自動的に同期されます。</p>
+        <h4 class="ja">自動で同期</h4>
+        <h4 class="en">Auto Sync</h4>
+        <p class="ja">iCloud経由でほかのデバイスとも自動的に同期されます。</p>
+        <p class="en">Your lists sync automatically across devices via iCloud.</p>
       </div>
     </div>
   </div>
@@ -145,9 +190,12 @@
 
 <section class="themes wrap">
   <div class="section-head">
-    <div class="eyebrow"><span class="dot"></span>カスタマイズ</div>
-    <h2>気分に合わせて、色を選べる</h2>
-    <p>8種類のテーマカラーとダークモードで、いつも見るリストを自分らしく。</p>
+    <div class="eyebrow ja"><span class="dot"></span>カスタマイズ</div>
+    <div class="eyebrow en"><span class="dot"></span>Customize</div>
+    <h2 class="ja">気分に合わせて、色を選べる</h2>
+    <h2 class="en">Pick a color that fits your mood.</h2>
+    <p class="ja">8種類のテーマカラーとダークモードで、いつも見るリストを自分らしく。</p>
+    <p class="en">8 theme colors plus dark mode. Make your list feel uniquely yours.</p>
   </div>
   <div class="swatches">
     <div class="swatch" style="background:#FF3B30"></div>
@@ -162,37 +210,57 @@
 </section>
 
 <section class="final-cta wrap" id="download">
-  <h2>今日の買い物から、はじめよう</h2>
-  <p>完全無料。アカウント登録は不要です。</p>
+  <h2 class="ja">今日の買い物から、はじめよう</h2>
+  <h2 class="en">Start your shopping list today.</h2>
+  <p class="ja">完全無料。アカウント登録は不要です。</p>
+  <p class="en">Free to download. No account required.</p>
   <a class="appstore-badge" href="https://apps.apple.com/jp/app/%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E8%B2%B7%E3%81%84%E7%89%A9%E3%83%AA%E3%82%B9%E3%83%88-%E6%97%A5%E3%80%85%E3%81%AE%E3%81%8A%E8%B2%B7%E3%81%84%E7%89%A9%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%AB/id6760892088" target="_blank" rel="noopener">
     <svg viewBox="0 0 384 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141 0 184.8 0 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-57.7-90-57.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-    App Storeでダウンロード
+    <span class="ja">App Storeでダウンロード</span>
+    <span class="en">Download on the App Store</span>
   </a>
   <div class="meta-row" style="justify-content:center; margin-top:34px;">
     <div class="item">
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-      iOS 15.0以降
+      iOS 15.0+
     </div>
     <div class="item">
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5h18M3 12h18M3 19h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-      12言語対応
+      <span class="ja">12言語対応</span>
+      <span class="en">12 Languages</span>
     </div>
     <div class="item">
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v3M12 18v3M3 12h3M18 12h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.6"/></svg>
-      年齢制限 4+
+      <span class="ja">年齢制限 4+</span>
+      <span class="en">Age 4+</span>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <div>© 2026 U_Top. シンプル買い物リスト</div>
+    <div class="ja">© 2026 U_Top. シンプル買い物リスト</div>
+    <div class="en">© 2026 U_Top. Simple Shopping List</div>
     <div class="links">
-      <a href="privacy-policy.html">プライバシーポリシー</a>
-      <a href="https://apps.apple.com/jp/developer/yuta-yamada/id1886651051?platform=iphone" target="_blank" rel="noopener">開発者ページ</a>
+      <a href="https://gist.github.com/utop01365/3f2ae1cc92a85ffc88a629bcba204da2" target="_blank" rel="noopener">
+        <span class="ja">プライバシーポリシー</span>
+        <span class="en">Privacy Policy</span>
+      </a>
+      <a href="https://apps.apple.com/jp/developer/yuta-yamada/id1886651051?platform=iphone" target="_blank" rel="noopener">
+        <span class="ja">開発者ページ</span>
+        <span class="en">Developer Page</span>
+      </a>
     </div>
   </div>
 </footer>
+
+<script>
+  function setLang(lang) {
+    document.documentElement.lang = lang;
+    document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  }
+</script>
 
 </body>
 </html>
